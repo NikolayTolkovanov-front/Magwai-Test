@@ -1,0 +1,54 @@
+// flex
+=flex-wrap
+    display: flex
+    flex-wrap: wrap
+
+=flex-wrap-center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+// buttons
+=btn-none
+    border: none
+    outline: none
+
+=block-center
+    display: block
+    margin: 0 auto
+
+// line under text
+=underline($line-color, $line-width, $margin)
+    content: ''
+    display: block
+    height: 1px
+    width: $line-width
+    background-color: $line-color
+    margin: $margin
+
+// container
+=container($container-width)
+    display: block
+    margin: 0 auto
+    width: $container-width
+
+// header settings 
+=header($header-bg-color)
+    display: flex
+    align-items: center
+    width: 100%
+    position: fixed
+    top: 0
+    background-color: $header-bg-color
+
+// footer settings
+=footer
+    display: block
+    width: 100%
+    bottom: 0
+
+// text
+=bold-up
+    font-weight: bold
+    text-transform: uppercase
