@@ -1,25 +1,25 @@
 // flex
-=flex-wrap
+@mixin flex-wrap()
     display: flex
     flex-wrap: wrap
 
-=flex-wrap-center
+@mixin flex-wrap-center()
     display: flex
     justify-content: center
     align-items: center
     flex-wrap: wrap
 
 // buttons
-=btn-none
+@mixin btn-none()
     border: none
     outline: none
 
-=block-center
+@mixin block-center()
     display: block
     margin: 0 auto
 
 // line under text
-=underline($line-color, $line-width, $margin)
+@mixin underline($line-color, $line-width, $margin)
     content: ''
     display: block
     height: 1px
@@ -28,13 +28,13 @@
     margin: $margin
 
 // container
-=container($container-width)
+@mixin container($container-width)
     display: block
     margin: 0 auto
-    width: $container-width
+    max-width: $container-width
 
 // header settings 
-=header($header-bg-color)
+@mixin header($header-bg-color)
     display: flex
     align-items: center
     width: 100%
@@ -43,12 +43,31 @@
     background-color: $header-bg-color
 
 // footer settings
-=footer
+@mixin footer()
     display: block
     width: 100%
     bottom: 0
 
 // text
-=bold-up
+@mixin bold-up-text()
     font-weight: bold
     text-transform: uppercase
+
+@mixin gradient-text($gradient)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-image: $gradient
+
+@mixin gradient-border($border-width, $border-radius, $gradient)
+    position: relative
+
+    &::before
+        content: ""
+        position: absolute
+        top: -$border-width
+        bottom: -$border-width
+        left: -$border-width
+        right: -$border-width
+        border-radius: $border-radius
+        background-image: $gradient
+        z-index: -1

@@ -2,7 +2,16 @@
     margin: 0
     padding: 0
     box-sizing: border-box
-    
+
+html
+    box-sizing: border-box
+
+*,
+*::after,
+*::before
+    box-sizing: inherit
+
+
 ul[class],
 ol[class] 
     padding: 0
@@ -36,7 +45,7 @@ footer
 footer, header
     flex: 0 0 auto
 
-ul[class] 
+ul
     list-style: none
 
 
@@ -50,7 +59,6 @@ button,
 textarea,
 select 
     font: inherit
-
 
 a
     display: inline-block
