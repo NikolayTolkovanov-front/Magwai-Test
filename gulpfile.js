@@ -59,7 +59,7 @@ function styles() {
 }
 
 function stylesVendor() {
-    return src(['node_modules/swiper/swiper-bundle.min.css'])
+    return src(['']) //стили из пакетов node_modules
         .pipe(
             gulpif(
                 isProd,
@@ -134,7 +134,6 @@ function scripts() {
 function concatScripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/swiper/swiper-bundle.min.js',
         'dist/js/**/*.js',
     ])
         .pipe(gulpif(isProd, uglify()))

@@ -37,7 +37,5 @@
     "jquery": "^3.6.0",
     "smart-grid": "^2.1.2"
   },
-  "dependencies": {
-    "swiper": "^8.0.6"
-  }
+  "dependencies": {}
 }
