@@ -38,7 +38,7 @@ function html() {
 }
 
 function styles() {
-    return src('app/sass/style.sass')
+    return src('app/scss/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulpif(isProd, mediaqueries()))
         .pipe(
@@ -120,7 +120,7 @@ function browsersync() {
 }
 
 function watching() {
-    watch(['app/sass/**/*.sass'], styles);
+    watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js'], series(scripts, concatScripts));
     watch(['app/index.html', 'app/html/*'], html);
     watch(['app/images/**/*'], images);
