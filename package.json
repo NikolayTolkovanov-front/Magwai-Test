@@ -1,7 +1,7 @@
 {
   "name": "new-gulp",
   "version": "1.0.0",
-  "description": "this is gulp-pack",
+  "description": "Gulp-pack - сборка для адаптивной и кроссбраузерной вёрстки",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "--dev",
@@ -10,13 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "browser-sync": "^2.27.7",
-    "del": "^6.0.0",
+  "dependencies": {
+    "browser-sync": "^2.29.1",
+    "del": "^6.1.1",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -25,17 +23,18 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
-    "gulp-replace": "^1.1.3",
+    "gulp-replace": "^1.1.4",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.1.0",
-    "gulp-svg-sprite": "^1.5.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-svg-sprites": "^4.1.2",
-    "gulp-svgmin": "^3.0.0",
-    "gulp-uglify-es": "^2.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^4.0.1",
-    "imagemin-jpeg-recompress": "^7.0.0",
-    "jquery": "^3.6.0",
+    "imagemin": "^7.0.1",
+    "imagemin-jpeg-recompress": "^7.1.0",
+    "jquery": "^3.6.4",
+    "sass": "^1.62.1",
     "smart-grid": "^2.1.2"
-  },
-  "dependencies": {}
+  }
 }
