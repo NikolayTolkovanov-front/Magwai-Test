@@ -1,10 +1,9 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 // css
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const mediaqueries = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
-const smartgrid = require('smart-grid');
 // html
 const rigger = require('gulp-rigger');
 // browser-sync
@@ -59,7 +58,7 @@ function styles() {
 }
 
 function stylesVendor() {
-    return src(['']) //стили из пакетов node_modules
+    return src(['./node_modules/swiper/swiper.min.css']) //стили из пакетов node_modules
         .pipe(
             gulpif(
                 isProd,
@@ -73,36 +72,6 @@ function stylesVendor() {
         .pipe(gulpif(isProd, cleancss()))
         .pipe(concat('styleVendor.css'))
         .pipe(dest('dist/css/vendor'));
-}
-
-function grid(done) {
-    let settings = {
-        outputStyle: 'sass' /* less || scss || sass || styl */,
-        columns: 12,
-        offset: '30px',
-        mobileFirst: false /* mobileFirst ? 'min-width' : 'max-width' */,
-        container: {
-            maxWidth: '1110px' /* max-width оn very large screen */,
-            fields: '18.5px' /* side fields */,
-        },
-        breakPoints: {
-            md: {
-                width: '992px',
-            },
-            sm: {
-                width: '768px',
-            },
-            xs: {
-                width: '576px',
-            },
-            xxs: {
-                width: '420px',
-            },
-        },
-    };
-
-    smartgrid('app/sass/modules', settings);
-    done();
 }
 
 function scripts() {
@@ -236,7 +205,6 @@ function fonts() {
 exports.html = html;
 exports.styles = styles;
 exports.stylesVendor = stylesVendor;
-exports.grid = grid;
 exports.scripts = scripts;
 exports.concatScripts = concatScripts;
 

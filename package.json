@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
     "browser-sync": "^2.29.1",
     "del": "^6.1.1",
     "gulp": "^4.0.2",
@@ -35,6 +37,7 @@
     "imagemin-jpeg-recompress": "^7.1.0",
     "jquery": "^3.6.4",
     "sass": "^1.62.1",
-    "smart-grid": "^2.1.2"
+    "smart-grid": "^2.1.2",
+    "swiper": "^9.4.1"
   }
 }

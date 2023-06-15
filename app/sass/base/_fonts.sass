@@ -4,3 +4,10 @@
         src: url(#{$path}.woff) format("woff"), url(#{$path}.woff2) format("woff2"), url(#{$path}.ttf) format("truetype")
         font-weight: $weight
         font-style: $style
+
+@include font-face($font-name: "Montserrat", $path: "../fonts/montserrat/Montserrat-Regular", $weight: 400)
+@include font-face($font-name: "Montserrat", $path: "../fonts/montserrat/Montserrat-SemiBold", $weight: 600)
+@include font-face($font-name: "Montserrat", $path: "../fonts/montserrat/Montserrat-Bold", $weight: 700)
+
+@include font-face($font-name: "Mulish", $path: "../fonts/mulish/Mulish-SemiBold", $weight: 600)
+@include font-face($font-name: "Mulish", $path: "../fonts/mulish/Mulish-Bold", $weight: 700)
