@@ -1,0 +1,64 @@
+.header {
+  padding: 30px 0;
+
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__menu {
+    padding-left: 76px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__menu-item {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+
+    & a {
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    &:not(:first-child) {
+      margin-left: 42px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__link--tel {
+    display: block;
+    border: 1px solid $grey;
+    padding: 20px 30px;
+    transform: skew(-20deg);
+    transition: $transition;
+
+    & img {
+      transform: skew(20deg);
+    }
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+  &__link--popup {
+    margin-left: 30px;
+  }
+}

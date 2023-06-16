@@ -65,11 +65,7 @@ function stylesVendor() {
 
 function scripts() {
   return src(["app/js/**/*.js"])
-    .pipe(
-      eslint({
-        globals: ["jQuery", "$"],
-      })
-    )
+    .pipe(eslint())
     .pipe(eslint.format())
     .pipe(
       eslint.result((result) => {

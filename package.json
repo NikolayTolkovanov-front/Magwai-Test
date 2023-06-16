@@ -4,8 +4,11 @@
   "description": "Gulp-pack - сборка для адаптивной и кроссбраузерной вёрстки",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "--dev",
-    "sprite": "--sprite"
+    "serve-dev": "gulp --dev",
+    "serve": "gulp",
+    "build-dev": "gulp build --dev",
+    "build-sprite": "gulp build --sprite",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
@@ -35,7 +38,6 @@
     "gulp-webp": "^4.0.1",
     "imagemin": "^7.0.1",
     "imagemin-jpeg-recompress": "^7.1.0",
-    "jquery": "^3.6.4",
     "sass": "^1.62.1",
     "smart-grid": "^2.1.2",
     "swiper": "^9.4.1"
