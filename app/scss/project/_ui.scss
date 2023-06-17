@@ -1,10 +1,9 @@
 .link-popup {
-  display: flex;
   position: relative;
   align-items: center;
+  text-align: center;
   padding: 20px 70px;
   margin-right: 32px;
-  text-align: center;
   background-color: $gold;
   transform: skewX(-20deg);
   transition: $transition;
@@ -20,23 +19,24 @@
   &::before {
     content: "";
     height: 100%;
-    width: 10px;
+    width: 6px;
     display: block;
     position: absolute;
     top: 0;
     left: 100%;
-    margin-left: 10px;
+    margin-left: 6px;
     background-color: $white;
     transition: $transition;
   }
-}
 
-.link-popup__text {
-  display: block;
-  font-family: 'Montserrat';
-  font-size: 14px;
-  font-weight: 700;
-  color: $white;
-  text-transform: uppercase;
-  transform: skewX(20deg);
+  &__text {
+    display: inline-block;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    transform: skewX(20deg);
+  }
 }

@@ -1,0 +1,122 @@
+.main__swiper {
+  position: relative;
+
+  // .swiper-pagination-bullet {
+  //   color: $white;
+  //   z-index: 1;
+  //   position: relative;
+  // }
+  // .pagination {
+  //   position: absolute;
+  //   // top: 0;
+  //   // left: 0;
+  //   bottom: 177px;
+  //   right: 100px;
+  //   z-index: 1;
+
+  //   &__list {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: flex-end;
+
+  //   }
+
+  //   &__list-item {
+  //     font-family: 'Montserrat';
+  //     font-size: 14px;
+  //     font-weight: 400;
+  //     letter-spacing: normal;
+  //     text-transform: uppercase;
+  //     color: $white;
+  //     opacity: 0.6;
+
+  //     &:not(:last-child) {
+  //       margin-bottom: 15px;
+  //     }
+  //   }
+
+  //   &__list-item--active {
+  //     font-weight: 700;
+  //     color: $white;
+  //   }
+  // }
+}
+.main__swiper-container {
+  border-radius: 60px 60px 0px 0px;
+  width: 1920px;
+  // height: 1034px;
+  height: 100vh;
+
+  .swiper-slide {
+    position: relative;
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    &__content {
+      padding-top: 600px;
+      padding-bottom: 177px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__text {
+      max-width: 686px;
+    }
+
+    &__title {
+      font-family: "Montserrat";
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 51px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    &__subtitle {
+      display: inline-block;
+      margin: 40px 0;
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+      opacity: 0.79;
+    }
+  }
+
+  .swiper-pagination {
+    top: 100%;
+    right: 100px;
+    transform: translateY(-100%);
+    padding-bottom: 170px;
+  }
+
+  .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+    display: block;
+}
+
+  .swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: $white;
+    text-align: right;
+    background-color: transparent;
+
+    &:not(:last-child) {
+      padding-bottom: 15px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: transparent;
+    opacity: 1;
+  }
+}
