@@ -58,7 +58,12 @@
     }
   }
 
-  &__link--popup {
+  .popup-link {
+    @include btn-with-divider;
     margin-left: 30px;
+  }
+
+  .popup-link__text {
+    @include btn-with-divider__text;
   }
 }

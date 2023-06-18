@@ -1,12 +1,10 @@
 {
   "overrides": [
     {
-      "files": [
-        "app/js/*.js"
-      ]
+      "files": ["app/js/*.js"]
     }
   ],
-  "env": {
-    "es6": true
+  "parserOptions": {
+    "ecmaVersion": 8
   }
 }

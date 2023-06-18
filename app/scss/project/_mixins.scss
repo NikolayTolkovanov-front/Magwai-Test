@@ -1,0 +1,43 @@
+@mixin btn-with-divider {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  padding: 20px 70px;
+  margin-right: 32px;
+  margin-left: 12px;
+  background-color: $gold;
+  transform: skewX(-20deg);
+  transition: $transition;
+
+  &:hover {
+    background-color: $grey;
+
+    &::before {
+      margin-left: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 6px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 6px;
+    background-color: $white;
+    transition: $transition;
+  }
+}
+
+@mixin btn-with-divider__text {
+  display: inline-block;
+  align-items: center;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+  transform: skewX(20deg);
+}

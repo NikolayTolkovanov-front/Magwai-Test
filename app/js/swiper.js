@@ -1,3 +1,5 @@
+// swiper
+
 const paginationItems = ["Dogie", "Падение", "Возвращение"]
 
 const customPaginationItem = (index, className) => {

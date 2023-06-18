@@ -65,7 +65,7 @@ function stylesVendor() {
 
 function scripts() {
   return src(["app/js/**/*.js"])
-    .pipe(eslint())
+    .pipe(eslint("./.eslintrc.json"))
     .pipe(eslint.format())
     .pipe(
       eslint.result((result) => {
@@ -80,7 +80,6 @@ function scripts() {
         presets: ["@babel/env"],
       })
     )
-    .pipe(concat("main.js"))
     .pipe(dest("dist/js"))
     .pipe(browserSync.stream());
 }
