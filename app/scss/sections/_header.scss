@@ -289,7 +289,7 @@
 
 @media screen and (max-width: $xs) {
   .header {
-    padding: 0;
+    padding: 20px 0;
 
     &__menu {
       padding-top: 70px;
@@ -306,7 +306,6 @@
 
     &__contact {
       width: 100%;
-      // padding: 0 12px;
     }
 
     .popup-link {
