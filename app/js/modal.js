@@ -14,6 +14,7 @@ if (popupLinks.length > 0) {
       const popupName = popupLink.getAttribute('href').replace('#', '')
       const currentPopup = document.getElementById(popupName)
       popupOpen(currentPopup)
+      validateForm()
       e.preventDefault()
     })
   }
@@ -48,7 +49,6 @@ function popupOpen(currentPopup) {
     })
   }
 }
-
 
 function popupClose(popupActive, doUnlock = true) {
   if (unlock) {

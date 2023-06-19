@@ -137,6 +137,14 @@
     }
   }
 
+  .popup-form--valid {
+    border: 1px solid $border-color--grey;
+  }
+
+  .popup-form--invalid {
+    border: 1px solid $border-color--red;
+  }
+
   &__submit {
     display: flex;
   }
