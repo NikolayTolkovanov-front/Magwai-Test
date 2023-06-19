@@ -1,10 +1,10 @@
 @mixin btn-with-divider {
-  position: relative;
-  align-items: center;
-  text-align: center;
   padding: 20px 70px;
   margin-right: 32px;
   margin-left: 12px;
+  position: relative;
+  align-items: center;
+  text-align: center;
   background-color: $gold;
   cursor: pointer;
   transform: skewX(-20deg);
@@ -38,6 +38,7 @@
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 600;
+  line-height: 18px;
   color: $white;
   text-transform: uppercase;
   transform: skewX(20deg);

@@ -1,5 +1,18 @@
 .header {
   padding: 30px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-grey;
+    overflow: hidden;
+    z-index: 2;
+  }
 
   &__body {
     display: flex;
@@ -7,15 +20,57 @@
   }
 
   &__logo {
-
+    z-index: 2;
   }
 
   &__burger {
+    width: 30px;
+    height: 20px;
+    position: relative;
     display: none;
+    align-self: center;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 3px;
+      content: "";
+      position: absolute;
+      left: 0;
+      background-color: $white;
+      border-radius: 5px;
+      transition: $transition;
+      z-index: 2;
+    }
+
+    &::before {
+      width: 15px;
+      top: 0;
+    }
+
+    &::after {
+      width: 21px;
+      bottom: 0;
+    }
+  }
+
+  &__burger-line--mid {
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $white;
+    border-radius: 5px;
+    transition: $transition;
   }
 
   &__menu {
     padding-left: 76px;
+    overflow: auto;
+    z-index: 2;
   }
 
   &__list {
@@ -23,12 +78,12 @@
   }
 
   &__menu-item {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 14px;
     font-weight: 700;
 
     & a {
-      color: #FFFFFF;
+      color: $white;
       text-transform: uppercase;
     }
 
@@ -40,10 +95,17 @@
   &__contact {
     display: flex;
     margin-left: auto;
+    z-index: 2;
+  }
+
+  &__contact-mobile {
+    display: none;
   }
 
   &__link--tel {
     display: block;
+    align-items: center;
+    text-align: center;
     border: 1px solid $grey;
     padding: 20px 30px;
     transform: skew(-20deg);
@@ -60,10 +122,184 @@
 
   .popup-link {
     @include btn-with-divider;
+    display: block;
     margin-left: 30px;
   }
 
   .popup-link__text {
     @include btn-with-divider__text;
+  }
+}
+
+@media screen and (max-width: $xl) {
+  .header {
+    padding: 30px 0 20px 0;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+
+    .wrapper {
+      padding: 0 50px;
+    }
+
+    &__menu {
+      width: 100%;
+      height: 100%;
+      padding-top: 160px;
+      padding-left: 0;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      background-color: $dark-grey;
+      transition: $transition;
+      z-index: 1;
+    }
+
+    &__menu--active {
+      top: 0;
+    }
+
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__menu-item {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 54px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      & a {
+        text-transform: uppercase;
+        color: $dark-grey;
+        -webkit-text-stroke: 1px $grey;
+        text-stroke: 1px $grey;
+      }
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+
+    &__burger {
+      display: block;
+      transition: $transition;
+      z-index: 3;
+    }
+
+    &__burger--active {
+
+      &::before {
+        width: 100%;
+        transform: rotate(45deg);
+        top: 50%;
+        transition: $transition;
+        
+      }
+
+      &::after {
+        width: 100%;
+        transform: rotate(-45deg);
+        top: 50%;
+        transition: $transition;
+      }
+    }
+
+    &__burger--active &__burger-line--mid {
+      width: 0;
+    }
+
+    &__logo {
+      margin-left: 90px;
+      z-index: 3;
+    }
+
+    &__contact {
+      z-index: 3;
+    }
+
+    .popup-link {
+      padding: 20px 40px;
+    }
+  
+    .popup-link__text {
+      @include btn-with-divider__text;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .header {
+
+    .wrapper {
+      padding: 0 15px;
+    }
+
+    &__body {
+      justify-content: space-between;
+    }
+
+    &__list {
+      margin-left: 50px;
+      align-items: start;
+    }
+
+    &__contact {
+      display: none;
+    }
+
+    &__contact-mobile {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__link--tel {
+      padding: 20px 128px;
+    }
+
+    .popup-link {
+      margin: 0;
+      margin-top: 20px;
+      padding: 20px 70px;
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .header {
+    padding: 0;
+
+    &__menu {
+      padding-top: 70px;
+    }
+
+    &__list {
+      margin-left: 15px;
+    }
+
+    &__menu-item {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__contact {
+      width: 100%;
+      // padding: 0 12px;
+    }
+
+    .popup-link {
+      font-size: 12px;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 }

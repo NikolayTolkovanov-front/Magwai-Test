@@ -20,11 +20,11 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1920px;
+  max-width: $xxl;
   margin: 0 auto;
 }
 
 .wrapper {
-  max-width: 1720px;
+  padding: 0 100px;
   margin: 0 auto;
 }
