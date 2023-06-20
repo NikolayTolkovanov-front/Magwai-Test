@@ -85,6 +85,11 @@
     & a {
       color: $white;
       text-transform: uppercase;
+      transition: $transition;
+
+      &:hover {
+        color: $gold;
+      }
     }
 
     &:not(:first-child) {
@@ -179,6 +184,12 @@
         color: $dark-grey;
         -webkit-text-stroke: 1px $grey;
         text-stroke: 1px $grey;
+
+        &:hover {
+          color: $grey;
+          -webkit-text-stroke: 0px $grey;
+          text-stroke: 0px $grey;
+        }
       }
 
       &:not(:first-child) {
@@ -292,7 +303,7 @@
     padding: 20px 0;
 
     &__menu {
-      padding-top: 70px;
+      padding-top: 100px;
     }
 
     &__list {

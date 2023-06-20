@@ -4,11 +4,13 @@
   height: 100%;
   top: 0;
   left: 0;
+  padding: 0 50px;
   background-color: $black;
   opacity: 0;
   visibility: hidden;
   transition: all $transition ease 0s;
   z-index: 10;
+  overflow: auto;
 
   &.open {
     opacity: 1;
@@ -17,6 +19,8 @@
 
   &__body {
     min-height: 100%;
+    margin: 0 20px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,6 +175,104 @@
     &__link {
       color: $grey;
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: $xl) {
+  .popup {
+    &__image {
+      display: none;
+    }
+
+    &__content {
+      justify-content: center;
+    }
+
+    &__content-text {
+      min-width: 100px;
+      max-width: 724px;
+    }
+
+    &__submit {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__btn-submit {
+      margin-top: 20px;
+      align-self: center;
+    }
+
+    .terms-of-use {
+      margin-left: 0;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .popup {
+
+    &__content {
+      width: 100%;
+    }
+
+    &__content-text {
+      margin: 40px;
+      min-width: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .popup {
+    padding: 0;
+
+    &__body {
+      margin: 0;
+    }
+    &__content {
+      transform: skewX(0deg);
+    }
+
+    &__content-text {
+      margin: 20px;
+      transform: skewX(0deg);
+    }
+
+    &__heading {
+      // flex-direction: column-reverse;
+      // align-items: center;
+      // text-align: center;
+    }
+
+    &__text {
+      max-width: 300px; 
+    }
+
+    &__close {
+      display: block;
+      padding: 12px 20px;
+      // margin-bottom: 20px;
+      // align-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .popup {
+    &__heading {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+    &__close {
+      // display: block;
+      // padding: 12px 20px;
+      margin-bottom: 20px;
+      align-self: center;
     }
   }
 }

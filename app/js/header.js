@@ -1,7 +1,8 @@
 const header = document.querySelector(".header");
 const headerMenu = document.querySelector(".header__menu");
 const headerBurger = document.querySelector(".header__burger");
-const mainContainer = document.querySelector(".main")
+const mainContainer = document.querySelector(".main");
+const html = document.querySelector('html')
 
 
 function renderMarginOfMainContainer() {
@@ -22,12 +23,15 @@ window.addEventListener("resize", () => {
 headerBurger.addEventListener("click", () => {
   if (
     headerMenu.classList.contains("header__menu--active") &&
-    headerBurger.classList.contains("header__burger--active")
+    headerBurger.classList.contains("header__burger--active") &&
+    html.classList.contains("lock")
   ) {
     headerMenu.classList.remove("header__menu--active");
     headerBurger.classList.remove("header__burger--active");
+    html.classList.remove("lock");
   } else {
     headerMenu.classList.add("header__menu--active");
     headerBurger.classList.add("header__burger--active");
+    html.classList.add("lock");
   }
 });
