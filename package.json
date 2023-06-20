@@ -4,8 +4,8 @@
   "description": "Gulp-pack - сборка для адаптивной и кроссбраузерной вёрстки",
   "main": "gulpfile.js",
   "scripts": {
-    "serve-dev": "gulp --dev",
-    "serve": "gulp",
+    "dev": "gulp --dev",
+    "prod": "gulp",
     "build-dev": "gulp build --dev",
     "build-sprite": "gulp build --sprite",
     "build": "gulp build"
